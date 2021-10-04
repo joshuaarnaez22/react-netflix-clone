@@ -1,0 +1,127 @@
+@import "../../global.scss";
+.profile{
+    color: #fff;
+    height: 100vh;
+    .profile__screen__body{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px;
+        padding-top: 8%;
+        @include mobile625{
+            padding-top: 15%;
+        }
+        @include mobile400{
+            padding-top: 30%;
+        }
+         .payment{
+            font-size: 20px;
+            background: #db373f;
+            animation: blink 1s infinite;
+            @include mobile400{
+            font-size: 10px;
+            }
+            @keyframes blink {
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+         }
+        .edit__profile_text{
+            font-size: 60px;
+            font-weight: 400;
+            margin-bottom: 20px;
+
+            @include mobile625{
+            font-size: 30px;
+            }
+            @include mobile400{
+            font-size: 20px;
+            margin-bottom: 10px;
+            }
+        }
+    }
+    .profile__info{
+        display: flex;
+        img{
+            height: 100px;
+            @include mobile625{
+                height: 60px;
+             }
+             @include mobile400{
+                height: 30px;
+             }
+        }
+        .profile__details{
+            margin-left: 20px;
+            flex: 1;
+            @include mobile400{
+                margin-left: 10px;
+             }
+            h2{
+                background: gray;
+                font-size: 15px;
+                padding: 15px;
+                @include mobile625{
+                    padding: 10px;
+                    font-size: 10px;
+                 }
+                 @include mobile400{
+                    font-size: 8px;
+                    padding: 5px;
+                 }
+            }
+            .profile__plans{
+                margin-top: 10px;
+                @include mobile625{
+                    margin-top: 5px;
+                    }
+                h3{
+                    padding-bottom: 10px;
+                    @include mobile625{
+                    padding-bottom: 0;
+                    font-size: 15px;
+                     }
+                     @include mobile400{
+                        font-size: 10px;
+                     }
+                }
+                p{
+                    @include mobile625{
+                        font-size: 10px;
+                         }
+                }
+                .profile__signout{
+                    padding: 10px 20px;
+                    font-size: 1rem;
+                    color: #fff;
+                    width: 100%;
+                    background: #e50914;
+                    border: none;
+                    margin-top: 15px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    @include mobile625{
+                        padding: 5px 15px;
+                        font-size: 1rem;
+                     }
+                     @include mobile400{
+                        margin-top: 5px;
+                        padding: 5px 10px;
+                        font-size: 10px;
+
+                     }
+                    &:hover{
+                    background: #e92832;
+                    }
+                }
+            }
+        }
+    }
+}
